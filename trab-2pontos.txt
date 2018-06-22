@@ -1,0 +1,81 @@
+Trabalho av2(2.0 pnts)
+
+1-Crie um script chamado seunome1.sh “mensagem”
+Este script deverá enviar todos os arquivos modificados para o github. 
+Com isso evita-se a necessidade de digitar todos os comando do git sempre que 
+quiser subir um arquivo para o repositorio Github.com.
+
+
+nano diogoramalho.sh
+
+
+
+
+#!/bin/bash
+
+git config --global user.name "diogopereira1"
+
+git config --global user.email "diogo.pereira@soulasalle.com.br"
+
+git add
+
+git commit -m "via script"
+
+git push
+
+
+
+2-Usando estrutura de repetição, faça um script (seunome2.sh) para calcular e exibir quantas
+pastas e quantos arquivos tem na pasta atual.
+
+
+nano diogoramalho2.sh
+
+
+
+#!/bin/bash
+
+pastas=0
+
+arquivos=0
+
+
+for item in *
+
+do
+
+ if [ -d $item ]
+ 
+ then
+  
+  pastas=$(($pastas+1))
+ 
+ else
+  
+  arquivos=$(($arquivos+1))
+ 
+ fi
+
+done
+
+echo "Arquivos: $arquivos diretorios: $pastas"
+
+
+___________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
